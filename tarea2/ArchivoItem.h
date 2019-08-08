@@ -48,7 +48,8 @@ public:
 
 	void buscarNombreS(const char* lookName) {
 		bool encontro = false;
-		ifstream fileC("archivoRegistros1.dat", ios::in | ios::binary);
+		//ifstream fileC("archivoRegistros1.dat", ios::in | ios::binary);
+		ifstream fileC("items.dat", ios::in | ios::binary);
 		if (!fileC) {
 			cout << "Error de aprtura en el archivo!" << endl;
 		}
@@ -78,7 +79,9 @@ public:
 
 	void buscarNombreB(const char* lookName, int mitad, int puntero,int left, int right) {
 		Item struct_item;
-		ifstream fileC("archivoRegistros1.dat", ios::in | ios::binary);
+		//ifstream fileC("archivoRegistros1.dat", ios::in | ios::binary);
+		cout << "holaa" << endl;
+		ifstream fileC("items.dat", ios::in | ios::binary);
 		if (!fileC) {
 			cout << "Error de aprtura en el archivo!" << endl;
 		}

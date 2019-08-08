@@ -1,5 +1,6 @@
 #include <iostream>
 #include "ArchivoItem.h"
+#include "ContadorTiempo.h"
 
 using namespace std;
 
@@ -7,6 +8,7 @@ int main() {
 
 	struct Item struct_item;
 	ArchivoItem ai;
+	ContadorTiempo ct;
 	int resp = -1;
 
 
@@ -70,12 +72,16 @@ int main() {
 			cin >> nombres;
 
 			if (resp == 2) {
+				ct.Iniciar();
 				ai.buscarNombreS(nombres);
+				ct.Terminar();
+				ct.duracion();
 			}
 			else {
-				int mitad = ai.getNum_Registros() / 2;
+				ct.Iniciar();
 				ai.buscarNombreB(nombres, 0, 0, 0, 0);
-				//ai.buscarBinario(nombres);
+				ct.Terminar();
+				ct.duracion();
 			}
 		}
 
